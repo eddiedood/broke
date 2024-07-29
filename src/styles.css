@@ -1,45 +1,93 @@
-body {
-    background-color: #e4c3c3; /* Dark gray, similar to broke.nyc background */
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Common sans-serif font */
-    color: #ffffff; /* White text color */
+/* styles.css */
+body, html {
     margin: 0;
-    padding: 20px; /* Padding for body */
-}
-
-.header {
-    background-color: #202020; /* Optional: matching header background */
-    padding: 10px 20px; /* Padding around the header */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Shadow for some depth */
-    display: flex; /* Enables flexbox layout */
-    align-items: center; /* Centers items vertically within the header */
-    justify-content: start; /* Aligns logo to the left */
-}
-
-.logo {
-    width: 150px; /* Logo width */
-    margin-right: 20px; /* Space after logo if other items are added to the header */
-}
-
-.helloWorldBackground {
-    background-color: #202020; /* Slightly lighter gray for the component background */
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .header {
+    background-color: #202020;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    width: 100px;
+    margin-right: 20px;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    flex: 1;
+    margin-top: 60px; /* Adjust based on header height */
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-color: #333;
+    color: white;
     padding: 20px;
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow */
-    margin-top: 20px; /* Adds space between the header and this content */
-}
-
-.helloWorldBackground h2 {
-    color: #fff; /* White color for the heading */
-    font-size: 24px; /* Large font size for visibility */
-    margin-bottom: 10px; /* Space between the heading and paragraph */
-}
-
-.helloWorldBackground p {
-    color: #ccc; /* Lighter color for paragraph */
-    font-size: 16px; /* Standard text size */
-}
-
-span {
-    font-size: 24px; /* Slightly larger text within the component */
-    line-height: 1.6; /* Improved line spacing for readability */
-}
+    position: fixed;
+    top: 60px; /* Adjust based on header height */
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 200px; /* Adjust based on sidebar width */
+  }
+  
+  .analytics-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .analytics-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .analytics-card h3 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .analytics-card p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #202020;
+  }

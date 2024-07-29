@@ -43,13 +43,13 @@ export const HelloWorld = () => {
 
   return (
     <ComponentsProvider>
-      <div className="header">
-        <img src="https://www.musicconnection.com/wp-content/uploads/2022/09/unnamed-2022-09-23T105833.081.png" alt="Broke Logo" className="logo" />
+      <div className="app-container">
+        <Header />
+        <div className="content-wrapper">
+          <Sidebar />
+          <MainContent />
+        </div>
       </div>
-      <Space around className="helloWorldBackground">
-        <h2>{displayName}</h2>
-        <p>{message}</p>
-      </Space>
     </ComponentsProvider>
   );
 };

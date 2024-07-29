@@ -21,6 +21,9 @@
 import React from 'react'
 import { HelloWorld } from './HelloWorld'
 import { ExtensionProvider } from '@looker/extension-sdk-react'
+import Header from './components/Header'; //Adding Header 
+import Sidebar from './components/Sidebar'; // Adding Sidebar
+import MainContent from './components/MainContent'; // Adding Main Content Area for Data Display
 import { hot } from 'react-hot-loader/root'
 
 export const App = hot(() => {
