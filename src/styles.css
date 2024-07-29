@@ -1,0 +1,45 @@
+body {
+    background-color: #e4c3c3; /* Dark gray, similar to broke.nyc background */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Common sans-serif font */
+    color: #ffffff; /* White text color */
+    margin: 0;
+    padding: 20px; /* Padding for body */
+}
+
+.header {
+    background-color: #202020; /* Optional: matching header background */
+    padding: 10px 20px; /* Padding around the header */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Shadow for some depth */
+    display: flex; /* Enables flexbox layout */
+    align-items: center; /* Centers items vertically within the header */
+    justify-content: start; /* Aligns logo to the left */
+}
+
+.logo {
+    width: 150px; /* Logo width */
+    margin-right: 20px; /* Space after logo if other items are added to the header */
+}
+
+.helloWorldBackground {
+    background-color: #202020; /* Slightly lighter gray for the component background */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow */
+    margin-top: 20px; /* Adds space between the header and this content */
+}
+
+.helloWorldBackground h2 {
+    color: #fff; /* White color for the heading */
+    font-size: 24px; /* Large font size for visibility */
+    margin-bottom: 10px; /* Space between the heading and paragraph */
+}
+
+.helloWorldBackground p {
+    color: #ccc; /* Lighter color for paragraph */
+    font-size: 16px; /* Standard text size */
+}
+
+span {
+    font-size: 24px; /* Slightly larger text within the component */
+    line-height: 1.6; /* Improved line spacing for readability */
+}

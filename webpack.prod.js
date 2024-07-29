@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-const commonConfig = require('./webpack.config')
+const commonConfig = require('./webpack.config');
 
 module.exports = {
   ...commonConfig,
@@ -20,4 +20,28 @@ module.exports = {
   optimization: {
     chunkIds: 'named',
   },
+  module: {
+    rules: [
+      // Existing CSS rule
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+      // Adding new rule for JavaScript and JSX files
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-react'],  // Preset to handle JSX
+          },
+        },
+      },
+    ],
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'], // Ensure Webpack processes .js and .jsx files
+  },
 }
+
